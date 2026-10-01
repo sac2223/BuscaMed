@@ -23,7 +23,7 @@ body {
     padding: 12px;
     border: none;
     border-radius: 6px;
-    font-size: 15px;
+    font-size: 1rem;
     cursor: pointer;
 }
 .registro-contenedor button {
@@ -32,7 +32,7 @@ body {
     padding: 12px;
     border: none;
     border-radius: 6px;
-    font-size: 15px;
+    font-size: 1rem;
     cursor: pointer;
 }
 .contenedor {
@@ -53,11 +53,11 @@ body {
 }
 
 h1 {
-    margin-bottom: 10px;
+    margin-bottom: 1.5rem;
 }
 
 p {
-    margin-bottom: 25px;
+    margin-bottom: 1.5rem;
     color: #CC0000;
 }
 
@@ -118,21 +118,26 @@ imput {
 
     border: 1px solid #ccc;
     border-radius: 6px;
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 a { 
     color: #333;
-    font-size: 14px;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
 }
 
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+}
 button:hover {
     background-color: #555;
 }
 
 hr {
-    margin: 25px 0;
+    margin: 1.5rem 0;
     border: none;
     border-top: 1px solid #ddd;
 }

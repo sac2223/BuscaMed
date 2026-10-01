@@ -1,0 +1,75 @@
+body {
+    font-family: Open Sans, sans-serif;
+    background-color: #171d4e;
+    color: white;
+    padding: 20px;
+    justify-content: center;
+}
+
+.rojo {
+  color: red;
+}
+
+.h1{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color:#4359e8;
+    justify-content: center;
+}
+
+.fijado {
+  position: fixed; /*fija la posición del elemento en la ventana del navegador*/
+  bottom:40px;
+  right: 10px;
+}
+
+.navegacion li {
+    margin-right: 20px;    /* opcional: separa los elementos */
+    display: inline-block; /* hace que los elementos estén en línea */
+}
+
+.navegacion a {
+    text-decoration: none; /* quita el subrayado de los enlaces */
+    color: rgb(224, 224, 232);           /* color de los enlaces */
+    font-weight: bold; /* hace que el texto sea negrita */
+    transition: color 0.3s; /* transición suave al cambiar de color */
+}
+.navegacion a:hover {
+    text-decoration: underline; /* subraya el enlace al pasar el mouse */
+    color: rgb(204, 62, 34);             /* cambia el color al pasar el mouse  */
+}
+.navegacion{
+    position:sticky;
+    top:0;
+    background-color: #333; /* color de fondo */
+    padding: 15px 0;           /* espacio interno */ 
+
+}
+.navegacion ul {
+    margin: 0; /* elimina el margen por defecto */
+    padding: 0; /* elimina el padding por defecto */
+    display: flex; /* usa flexbox para alinear los elementos */
+    list-style-type: none; /* elimina los puntos de la lista */
+}
+
+/* Botón */
+.search-bar button {
+  padding: 8px 20px;
+  border: none;
+  background-color: #5441e3;
+  color: white;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-bar button:hover {
+  background-color: #3465bb;
+}
+/* Contenedor de la barra */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
