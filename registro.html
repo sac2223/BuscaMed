@@ -10,7 +10,7 @@
     
     <div class="contenedor registro-contenedor">
         <div class="logo"> 
-            ✚ BuscaMed
+          <span class="rojo">✚</span> BuscaMed
         </div>
 
         <h1> Registro de Farmacia</h1>
@@ -20,16 +20,16 @@
         <form>
 
             <label>Nombre de la Farmacia</label>
-            <input type="text" placeholder="ej.Farmacia San Jose">
+            <input type="text" placeholder="ej.Farmacia San Jose" required>
 
-            <label>NIT O RUT </label>
-            <input type="text" placeholder="ej. 123456789-0">
+            <label>NIT</label>
+            <input type="text" placeholder="ej. 123456789-0" required>
 
             <label>Dirección</label>
-            <input type="text" placeholder="ej. Calle 123 # 45-67">
+            <input type="address" placeholder="ej. Calle 123 # 45-67" required>
 
             <label>Ciudad</label>
-            <select>
+            <select name="city" required>
                 <option value="">Selecciona una ciudad</option>
                 <option>Medellín</option>
                 <option>Bogotá</option>
@@ -41,24 +41,24 @@
             <label>Nombre del responsable</label>
             <input 
                 type="text" 
-                placeholder="Ej. Juan Pérez">
+                placeholder="Ej. Juan Pérez" required>
 
                   <label>Correo electrónico</label>
             <input 
                 type="email" 
-                placeholder="Ej. farmacia@correo.com"
+                placeholder="Ej. farmacia@correo.com" required
             >
 
             <label>Teléfono</label>
             <input 
                 type="tel" 
-                placeholder="Ej. 300 123 4567"
+                placeholder="Ej. 300 123 4567" required
             >
 
             <label>Contraseña</label>
             <input 
                 type="password" 
-                placeholder="Mínimo 8 caracteres"
+                placeholder="Mínimo 8 caracteres" required
             >
 
             <button type="submit">
@@ -76,4 +76,4 @@
         
     </div>
 </body>
-</html>
+</html>>
