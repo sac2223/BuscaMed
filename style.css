@@ -61,7 +61,7 @@ p {
     color: #CC0000;
 }
 
-@media screen {
+
  input[type="email"] {
   border: 1px solid #ccc;
   padding: 10px;
@@ -98,9 +98,6 @@ input[type="text"] {
   transition: border-color 0.3s;
  
 }  
-}
-
-
 
 form {
     display: flex;
@@ -112,7 +109,7 @@ label {
     font-weight: bold;
 }
 
-imput {
+input {
     padding: 12px;
     margin-bottom: 18px;
 
