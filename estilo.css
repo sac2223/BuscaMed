@@ -11,17 +11,17 @@ body {
 }
 
 .h1{
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    color:#4359e8;
-    justify-content: center;
+    font-size: 25px;  /*Una margen inferior de 30px para separar el título del contenido siguiente*/
+    font-weight: bold; /*una fuente en negrita para resaltar el título*/
+    margin-bottom: 30px;  /*Una margen inferior de 30px para separar el título del contenido siguiente*/
+    color:#4359e8; /*un color azul para el título*/
+    justify-content: center; /*centra el título horizontalmente en su contenedor*/
 }
 
 .fijado {
   position: fixed; /*fija la posición del elemento en la ventana del navegador*/
-  bottom:40px;
-  right: 10px;
+  bottom:40px;  /*coloca el elemento a 40 píxeles desde la parte inferior de la ventana del navegador*/
+  right: 10px;   /*coloca el elemento a 10 píxeles desde la parte derecha de la ventana del navegador*/
 }
 
 .navegacion li {
@@ -40,7 +40,7 @@ body {
     color: rgb(204, 62, 34);             /* cambia el color al pasar el mouse  */
 }
 .navegacion{
-    position:sticky;
+    position:sticky;  /* hace que la barra de navegación se quede en su posición al hacer scroll */
     top:0;
     background-color: #333; /* color de fondo */
     padding: 15px 0;           /* espacio interno */ 
@@ -55,13 +55,13 @@ body {
 
 /* Botón */
 .search-bar button {
-  padding: 8px 20px;
-  border: none;
-  background-color: #5441e3;
-  color: white;
-  border-radius: 0 20px 20px 0;
-  cursor: pointer;
-  transition: background 0.3s;
+  padding: 8px 20px; /* espacio interno del botón */
+  border: none;  /* elimina el borde del botón */
+  background-color: #5441e3;  /* color de fondo del botón */
+  color: white;   /* color del texto del botón */
+  border-radius: 0 20px 20px 0; /* bordes redondeados en la parte derecha del botón */
+  cursor: pointer;  /* cambia el cursor al pasar sobre el botón */
+  transition: background 0.3s; /* transición suave al cambiar el color de fondo */
 }
 
 .search-bar button:hover {
