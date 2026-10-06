@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #060a2a;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contenedor{
+    background-color: white;
+    width: 400px;
+    padding: 60px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) ;
+}
+
+.logo{
+    color: red;
+    font-size: 25px;
+}
+
+.nombre-sitio{
+    font-size: 25px;
+    color: #4359e8;
+    font-weight: bold;
+}
+
+h1{
+    font-size: 27px;
+    margin-top: 20px;
+    margin-bottom: 10px
+}
+
+p{
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.registro{
+    display: flex;
+    flex-direction: column;
+}
+
+.correo{
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#c-electronico{
+    padding: 7px;
+    border: 1px solid ;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.enviar{
+    background-color: #4359e8;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #555;
+}
+
+a{
+    color: #333;
+    font-size: 15px;
+    text-decoration: none;
+}
+
