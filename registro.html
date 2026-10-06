@@ -1,16 +1,16 @@
-<!DOCTYPE html>
+<!DOCTYPE html> <!--define el tipo de documento como HTML5 *//-->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- /* establece la codificación de caracteres y la configuración de la ventana gráfica--> para dispositivos móviles */
     <title> Registro-BuscaMed</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"><!-- /* vincula el archivo de hoja de estilo CSS para aplicar estilos a la página */-->
 </head>
 <body>
     
-    <div class="contenedor registro-contenedor">
+    <div class="contenedor registro-contenedor"> <!--/* crea un contenedor principal para el contenido de la página con una clase adicional para estilos específicos de la página de registro */-->
         <div class="logo"> 
-          <span class="rojo">✚</span> BuscaMed
+          <span class="rojo">✚</span> BuscaMed <!--/* muestra el logotipo de la página con un símbolo y el nombre de la marca, aplicando un estilo de color rojo al símbolo */-->
         </div>
 
         <h1> Registro de Farmacia</h1>
@@ -20,15 +20,15 @@
         <form>
 
             <label>Nombre de la Farmacia</label>
-            <input type="text" placeholder="ej.Farmacia San Jose" required>
+            <input type="text" placeholder="ej.Farmacia San Jose" required> <!--/* crea un formulario con campos de entrada para registrar la información de la farmacia, incluyendo nombre, NIT, dirección, ciudad, nombre del responsable, correo electrónico, teléfono y contraseña. Cada campo tiene una etiqueta descriptiva y un marcador de posición para guiar al usuario. Todos los campos son obligatorios (required). */-->
 
             <label>NIT</label>
-            <input type="text" placeholder="ej. 123456789-0" required>
+            <input type="text" placeholder="ej. 123456789-0" required> <!--/* crea un campo de entrada para el NIT de la farmacia con un marcador de posición y lo hace obligatorio */-->
 
             <label>Dirección</label>
-            <input type="address" placeholder="ej. Calle 123 # 45-67" required>
+            <input type="address" placeholder="ej. Calle 123 # 45-67" required> <!--/* crea un campo de entrada para la dirección de la farmacia con un marcador de posición y lo hace obligatorio */-->
 
-            <label>Ciudad</label>
+            <label>Ciudad</label> <!--/* crea un campo de selección para la ciudad de la farmacia con un marcador de posición y lo hace obligatorio */-->
             <select name="city" required>
                 <option value="">Selecciona una ciudad</option>
                 <option>Medellín</option>
@@ -38,30 +38,30 @@
                 <option>Cartagena</option>
             </select>
 
-            <label>Nombre del responsable</label>
+            <label>Nombre del responsable</label> <!--/* crea un campo de entrada para el nombre del responsable de la farmacia con un marcador de posición y lo hace obligatorio */-->
             <input 
                 type="text" 
                 placeholder="Ej. Juan Pérez" required>
 
-                  <label>Correo electrónico</label>
-            <input 
+                  <label>Correo electrónico</label> <!--/* crea un campo de entrada para el correo electrónico de la farmacia con un marcador de posición y lo hace obligatorio */-->
+            <input  
                 type="email" 
                 placeholder="Ej. farmacia@correo.com" required
             >
 
-            <label>Teléfono</label>
+            <label>Teléfono</label> <!--/* crea un campo de entrada para el teléfono de la farmacia con un marcador de posición y lo hace obligatorio */-->
             <input 
                 type="tel" 
                 placeholder="Ej. 300 123 4567" required
             >
 
-            <label>Contraseña</label>
+            <label>Contraseña</label> <!--/* crea un campo de entrada para la contraseña de la farmacia con un marcador de posición y lo hace obligatorio */-->
             <input 
                 type="password" 
                 placeholder="Mínimo 8 caracteres" required
             >
 
-            <button type="submit">
+            <button type="submit"> <!--/* crea un botón de envío para el formulario con el texto "Registrarme" */-->
                 Registrarme
             </button>
 
@@ -69,7 +69,7 @@
 
           <hr>
 
-        <p class="registro">
+        <p class="registro"> <!--/* crea un párrafo con un enlace para los usuarios que ya tienen una cuenta, invitándolos a iniciar sesión en lugar de registrarse nuevamente */-->
             ¿Ya tienes una cuenta?
             <a href="inicio.html">Iniciar sesión</a>
         </p>
