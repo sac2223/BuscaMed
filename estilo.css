@@ -1,13 +1,13 @@
 body {
-    font-family: Open Sans, sans-serif;
-    background-color: #171d4e;
-    color: white;
-    padding: 20px;
-    justify-content: center;
+    font-family: Open Sans, sans-serif; /* Cambia la fuente del texto a "Open Sans" con una fuente de respaldo sans-serif */
+    background-color: #171d4e; /* Cambia el color de fondo del cuerpo a un tono azul oscuro */
+    color: white; /* Cambia el color del texto a blanco */
+    padding: 20px; /* Agrega un relleno de 20 píxeles alrededor del contenido del cuerpo */
+    justify-content: center; /* Centra el contenido horizontalmente dentro del cuerpo */
 }
 
 .rojo {
-  color: red;
+  color: red; /* Cambia el color del texto a rojo*/
 }
 
 .h1{
@@ -65,11 +65,11 @@ body {
 }
 
 .search-bar button:hover {
-  background-color: #3465bb;
+  background-color: #3465bb;  /* cambia el color de fondo al pasar el mouse */
 }
 /* Contenedor de la barra */
 .search-bar {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0;
+  display: flex; /* usa flexbox para alinear los elementos */ 
+  justify-content: center; /* centra los elementos horizontalmente */
+  margin: 20px 0; /* margen superior e inferior de 20px */
 }
