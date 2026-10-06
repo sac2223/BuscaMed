@@ -128,7 +128,7 @@ button:hover {
     background-color: #555;
 }
 
-hr {
+hr {/* estilo para todas las líneas horizontales */
     margin: 1.5rem 0; /* establece un margen superior e inferior de 1.5rem para separar el contenido */
     border: none; /* elimina el borde por defecto de la línea horizontal */
     border-top: 1px solid #ddd; /* establece un borde superior de 1px sólido y color gris claro para la línea horizontal */
