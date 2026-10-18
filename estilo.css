@@ -262,24 +262,24 @@ footer {
 
 footer h2 {
   margin: 0 0 0.75rem; /* margen inferior del título del footer */
-  color: var(--blanco);
+  color: var(--blanco); 
 }
 
 footer p {
-  max-width: 62ch;
-  margin: 0 auto 1rem;
+  max-width: 62ch;/* ancho máximo del párrafo del footer */
+  margin: 0 auto 1rem; /* margen inferior del párrafo del footer */
 }
 
 footer a {
-  color: var(--azul-claro);
-  font-weight: 600;
+  color: var(--azul-claro);/* color de los enlaces del footer */
+  font-weight: 600;/* peso de fuente de los enlaces del footer */
 }
 
 footer a:hover {
-  color: var(--blanco);
+  color: var(--blanco);/* color de los enlaces del footer al pasar el mouse */
 }
 
 .copy {
-  margin-top: 1.5rem;
-  font-size: 0.85rem;
+  margin-top: 1.5rem; /* margen superior del texto de copyright */
+  font-size: 0.85rem;/* tamaño de fuente del texto de copyright */
 }
