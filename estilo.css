@@ -12,6 +12,7 @@
   --fuente: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; /* fuente principal */
 }
 
+<<<<<<< HEAD
 /* ========== Base ========== */
 *,
 *::before, 
@@ -22,6 +23,8 @@
 html {
   scroll-behavior: smooth; /* para que el scroll sea suave */
 }
+=======
+>>>>>>> b36b83d (actualizacion estilo del index)
 
 body { /* estilos base de la página */
   margin: 0;
