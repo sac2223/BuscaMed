@@ -1,84 +1,84 @@
-/* ========== Variables ========== */
+
 :root {
-  --azul: #1565d8;
-  --azul-oscuro: #0d4aa8;
-  --azul-claro: #8fc2ff;
-  --tinta: #0f2a4a;
-  --gris: #5a6b80;
-  --borde: #cddbea;
-  --fondo: #e8f1fb;
-  --blanco: #ffffff;
-  --radio: 14px;
-  --fuente: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  --azul: #1565d8; /* color principal de la marca */
+  --azul-oscuro: #0d4aa8; /* color principal de la marca, versión más oscura */
+  --azul-claro: #8fc2ff; /* color principal de la marca, versión más clara */
+  --tinta: #0f2a4a;/* color de texto principal */
+  --gris: #5a6b80; /* color de texto secundario */
+  --borde: #cddbea; /* color de borde */
+  --fondo: #e8f1fb; /* color de fondo */
+  --blanco: #ffffff; /* color de fondo de elementos */
+  --radio: 14px; /* radio de borde de elementos */
+  --fuente: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; /* fuente principal */
 }
 
 /* ========== Base ========== */
 *,
-*::before,
-*::after {
-  box-sizing: border-box;
+*::before, 
+*::after { /* para que el padding y el borde se incluyan en el ancho y alto de los elementos */
+  box-sizing: border-box; /* para que el padding y el borde se incluyan en el ancho y alto de los elementos */
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* para que el scroll sea suave */
 }
 
-body {
+body { /* estilos base de la página */
   margin: 0;
-  font-family: var(--fuente);
-  line-height: 1.6;
-  color: var(--tinta);
-  background: var(--fondo);
+  font-family: var(--fuente); /* fuente principal */
+  line-height: 1.6; /* altura de línea base */
+  color: var(--tinta); /* color de texto principal */
+  background: var(--fondo); /* color de fondo */
 }
 
 h1, h2, h3 {
-  line-height: 1.2;
+  line-height: 1.2; /* altura de línea para títulos */
 }
 
 .rojo {
-  color: red;
+  color: red; /* clase para resaltar texto en rojo */
 }
 
-a:focus-visible,
-button:focus-visible,
+a:focus-visible, /* para que los enlaces tengan un resalte visible al recibir foco */
+button:focus-visible, 
 input:focus-visible {
-  outline: 3px solid rgba(21, 101, 216, 0.45);
-  outline-offset: 2px;
+  outline: 3px solid rgba(21, 101, 216, 0.45);/* resalte visible al recibir foco */
+  outline-offset: 2px; /* separación entre el resalte y el elemento */
 }
 
 /* ========== Header ========== */
 .header {
   display: grid;
-  grid-template-columns: 1fr auto;
-  grid-template-areas:
-    "titulo nav"
+  grid-template-columns: 1fr auto; /* dos columnas: una flexible y otra automática */
+  grid-template-areas: /* define las áreas de la cuadrícula */
+    "titulo nav" /* primera fila: título y navegación */
     "desc   desc";
-  align-items: center;
+  align-items: center; /* alinea los elementos verticalmente al centro */
   gap: 0.5rem 1.5rem;
-  padding: 1.25rem 2rem 1.5rem;
-  color: var(--blanco);
-  background: var(--tinta);
-  border-bottom: 5px solid var(--azul);
+  padding: 1.25rem 2rem 1.5rem; /* padding superior, derecho, inferior e izquierdo */
+  color: var(--blanco); /* color de texto blanco */
+  background: var(--tinta); /* color de fondo del header */
+  border-bottom: 5px solid var(--azul); /* borde inferior del header */
 }
 
 .h1 {
-  grid-area: titulo;
+  grid-area: titulo; /* asigna el área de la cuadrícula al título */
   margin: 0;
   font-size: 2rem;
 }
 
 .header h3 {
   grid-area: desc;
-  max-width: 60ch;
+  max-width: 60ch; /* ancho máximo del texto de descripción */
   margin: 0;
   font-size: 1rem;
   font-weight: 400;
-  color: #b8c9de;
+  color: #b8c9de; /* color de texto secundario */
 }
 
 /* ========== Navegación ========== */
 .navegacion {
-  grid-area: nav;
+  grid-area: nav; /* asigna el área de la cuadrícula a la navegación */
 }
 
 .navegacion ul {
