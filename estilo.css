@@ -1,75 +1,285 @@
+/* ========== Variables ========== */
+:root {
+  --azul: #1565d8;
+  --azul-oscuro: #0d4aa8;
+  --azul-claro: #8fc2ff;
+  --tinta: #0f2a4a;
+  --gris: #5a6b80;
+  --borde: #cddbea;
+  --fondo: #e8f1fb;
+  --blanco: #ffffff;
+  --radio: 14px;
+  --fuente: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+}
+
+/* ========== Base ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    font-family: Open Sans, sans-serif; /* Cambia la fuente del texto a "Open Sans" con una fuente de respaldo sans-serif */
-    background-color: #171d4e; /* Cambia el color de fondo del cuerpo a un tono azul oscuro */
-    color: white; /* Cambia el color del texto a blanco */
-    padding: 20px; /* Agrega un relleno de 20 píxeles alrededor del contenido del cuerpo */
-    justify-content: center; /* Centra el contenido horizontalmente dentro del cuerpo */
+  margin: 0;
+  font-family: var(--fuente);
+  line-height: 1.6;
+  color: var(--tinta);
+  background: var(--fondo);
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
 }
 
 .rojo {
-  color: red; /* Cambia el color del texto a rojo*/
+  color: red;
 }
 
-.h1{
-    font-size: 25px;  /*Una margen inferior de 30px para separar el título del contenido siguiente*/
-    font-weight: bold; /*una fuente en negrita para resaltar el título*/
-    margin-bottom: 30px;  /*Una margen inferior de 30px para separar el título del contenido siguiente*/
-    color:#4359e8; /*un color azul para el título*/
-    justify-content: center; /*centra el título horizontalmente en su contenedor*/
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid rgba(21, 101, 216, 0.45);
+  outline-offset: 2px;
 }
 
-.fijado {
-  position: fixed; /*fija la posición del elemento en la ventana del navegador*/
-  bottom:40px;  /*coloca el elemento a 40 píxeles desde la parte inferior de la ventana del navegador*/
-  right: 10px;   /*coloca el elemento a 10 píxeles desde la parte derecha de la ventana del navegador*/
+/* ========== Header ========== */
+.header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "titulo nav"
+    "desc   desc";
+  align-items: center;
+  gap: 0.5rem 1.5rem;
+  padding: 1.25rem 2rem 1.5rem;
+  color: var(--blanco);
+  background: var(--tinta);
+  border-bottom: 5px solid var(--azul);
 }
 
-.navegacion li {
-    margin-right: 20px;    /* opcional: separa los elementos */
-    display: inline-block; /* hace que los elementos estén en línea */
+.h1 {
+  grid-area: titulo;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header h3 {
+  grid-area: desc;
+  max-width: 60ch;
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #b8c9de;
+}
+
+/* ========== Navegación ========== */
+.navegacion {
+  grid-area: nav;
+}
+
+.navegacion ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .navegacion a {
-    text-decoration: none; /* quita el subrayado de los enlaces */
-    color: rgb(224, 224, 232);           /* color de los enlaces */
-    font-weight: bold; /* hace que el texto sea negrita */
-    transition: color 0.3s; /* transición suave al cambiar de color */
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--blanco);
+  text-decoration: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  transition: background 0.2s, border-color 0.2s;
 }
+
 .navegacion a:hover {
-    text-decoration: underline; /* subraya el enlace al pasar el mouse */
-    color: rgb(204, 62, 34);             /* cambia el color al pasar el mouse  */
-}
-.navegacion{
-    position:sticky;  /* hace que la barra de navegación se quede en su posición al hacer scroll */
-    top:0;
-    background-color: #333; /* color de fondo */
-    padding: 15px 0;           /* espacio interno */ 
-
-}
-.navegacion ul {
-    margin: 0; /* elimina el margen por defecto */
-    padding: 0; /* elimina el padding por defecto */
-    display: flex; /* usa flexbox para alinear los elementos */
-    list-style-type: none; /* elimina los puntos de la lista */
+  background: var(--azul);
+  border-color: var(--azul);
 }
 
-/* Botón */
+/* ========== Contenido principal ========== */
+main {
+  display: grid;
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+main h2 {
+  margin: 0 0 1rem;
+  font-size: 1.75rem;
+}
+
+/* ----- Bienvenida (lo más llamativo de la página) ----- */
+.hero {
+  padding: 3rem 2.5rem;
+  color: var(--blanco);
+  background: var(--azul);
+  border-radius: var(--radio);
+  box-shadow: 0 14px 32px rgba(21, 101, 216, 0.28);
+}
+
+.hero h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.hero p {
+  max-width: 62ch;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* ----- Beneficios ----- */
+.beneficios ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.beneficios li {
+  padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+  background: var(--blanco);
+  border-left: 5px solid var(--azul);
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(15, 42, 74, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.beneficios li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(15, 42, 74, 0.14);
+}
+
+.beneficios strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 1.1rem;
+}
+
+/* ----- Buscador ----- */
+.buscador {
+  text-align: center;
+}
+
+.search-bar {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0.4rem;
+  background: var(--blanco);
+  border: 1.5px solid var(--borde);
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(15, 42, 74, 0.08);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.search-bar:focus-within {
+  border-color: var(--azul);
+  box-shadow: 0 0 0 4px rgba(21, 101, 216, 0.15);
+}
+
+.search-bar input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.75rem 1.1rem;
+  font: inherit;
+  color: var(--tinta);
+  background: transparent;
+  border: none;
+}
+
+.search-bar input:focus-visible {
+  outline: none; /* el resalte lo hace toda la barra */
+}
+
 .search-bar button {
-  padding: 8px 20px; /* espacio interno del botón */
-  border: none;  /* elimina el borde del botón */
-  background-color: #5441e3;  /* color de fondo del botón */
-  color: white;   /* color del texto del botón */
-  border-radius: 0 20px 20px 0; /* bordes redondeados en la parte derecha del botón */
-  cursor: pointer;  /* cambia el cursor al pasar sobre el botón */
-  transition: background 0.3s; /* transición suave al cambiar el color de fondo */
+  padding: 0.75rem 1.6rem;
+  font: inherit;
+  font-weight: 700;
+  color: var(--blanco);
+  background: var(--azul);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
 }
 
 .search-bar button:hover {
-  background-color: #3465bb;  /* cambia el color de fondo al pasar el mouse */
+  background: var(--azul-oscuro);
 }
-/* Contenedor de la barra */
-.search-bar {
-  display: flex; /* usa flexbox para alinear los elementos */ 
-  justify-content: center; /* centra los elementos horizontalmente */
-  margin: 20px 0; /* margen superior e inferior de 20px */
+
+.search-bar button:active {
+  transform: scale(0.97);
+}
+
+/* ========== Botón fijo de WhatsApp ========== */
+.fijado {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 10;
+}
+
+.fijado a {
+  display: block;
+  line-height: 0;
+  border-radius: 50%;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s;
+}
+
+.fijado a:hover {
+  transform: scale(1.12);
+}
+
+.fijado img {
+  border-radius: 50%;
+}
+
+/* ========== Footer ========== */
+footer {
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  color: #b8c9de;
+  background: var(--tinta);
+  border-top: 5px solid var(--azul);
+}
+
+footer h2 {
+  margin: 0 0 0.75rem;
+  color: var(--blanco);
+}
+
+footer p {
+  max-width: 62ch;
+  margin: 0 auto 1rem;
+}
+
+footer a {
+  color: var(--azul-claro);
+  font-weight: 600;
+}
+
+footer a:hover {
+  color: var(--blanco);
+}
+
+.copy {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
 }
