@@ -82,12 +82,12 @@ input:focus-visible {
 }
 
 .navegacion ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  display: flex; /* para que los elementos de la lista se muestren en línea */
+  flex-wrap: wrap; /* para que los elementos de la lista se ajusten a la siguiente línea si no caben en una sola */
+  gap: 0.5rem; /* espacio entre los elementos de la lista */
+  margin: 0; /* elimina el margen por defecto de la lista */
+  padding: 0; /* elimina el padding por defecto de la lista */
+  list-style: none; /* elimina los puntos de la lista */
 }
 
 .navegacion a {
@@ -97,45 +97,45 @@ input:focus-visible {
   font-weight: 600;
   color: var(--blanco);
   text-decoration: none;
-  border: 1.5px solid rgba(255, 255, 255, 0.3);
-  border-radius: 999px;
-  transition: background 0.2s, border-color 0.2s;
+  border: 1.5px solid rgba(255, 255, 255, 0.3); /* borde de los enlaces de navegación */
+  border-radius: 999px; /* borde redondeado de los enlaces de navegación */
+  transition: background 0.2s, border-color 0.2s; /* transición para el cambio de color de fondo y borde al pasar el mouse */
 }
 
 .navegacion a:hover {
-  background: var(--azul);
-  border-color: var(--azul);
+  background: var(--azul); /* color de fondo al pasar el mouse */
+  border-color: var(--azul); /* color de borde al pasar el mouse */
 }
 
 /* ========== Contenido principal ========== */
 main {
-  display: grid;
+  display: grid; /* para que los elementos del main se muestren en una cuadrícula */
   gap: 2.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem;
+  max-width: 1000px; /* ancho máximo del contenido principal */
+  margin: 0 auto; /* centra el contenido principal horizontalmente */
+  padding: 2.5rem 1.5rem; /* padding superior, derecho, inferior e izquierdo del contenido principal */
 }
 
 main h2 {
-  margin: 0 0 1rem;
-  font-size: 1.75rem;
+  margin: 0 0 1rem; /* margen inferior del título de sección */
+  font-size: 1.75rem; /* tamaño de fuente del título de sección */
 }
 
 /* ----- Bienvenida (lo más llamativo de la página) ----- */
 .hero {
-  padding: 3rem 2.5rem;
-  color: var(--blanco);
-  background: var(--azul);
-  border-radius: var(--radio);
-  box-shadow: 0 14px 32px rgba(21, 101, 216, 0.28);
+  padding: 3rem 2.5rem; /* padding superior, derecho, inferior e izquierdo de la sección de bienvenida */
+  color: var(--blanco); /* color de texto blanco */
+  background: var(--azul); /* color de fondo de la sección de bienvenida */
+  border-radius: var(--radio); /* radio de borde de la sección de bienvenida */
+  box-shadow: 0 14px 32px rgba(21, 101, 216, 0.28); /* sombra de la sección de bienvenida */
 }
 
 .hero h2 {
-  font-size: clamp(2rem, 5vw, 3rem);
+  font-size: clamp(2rem, 5vw, 3rem); /* tamaño de fuente del título de bienvenida, ajustable según el ancho de la ventana */
 }
 
 .hero p {
-  max-width: 62ch;
+  max-width: 62ch; /* ancho máximo del párrafo de bienvenida */
   margin: 0;
   font-size: 1.1rem;
 }
@@ -143,7 +143,7 @@ main h2 {
 /* ----- Beneficios ----- */
 .beneficios ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* para que los elementos de la lista se ajusten al ancho de la ventana */
   gap: 1rem;
   margin: 0;
   padding: 0;
@@ -151,20 +151,20 @@ main h2 {
 }
 
 .beneficios li {
-  padding: 1.25rem 1.25rem 1.25rem 1.5rem;
+  padding: 1.25rem 1.25rem 1.25rem 1.5rem; /* padding superior, derecho, inferior e izquierdo de los elementos de la lista */
   background: var(--blanco);
   border-left: 5px solid var(--azul);
   border-radius: 8px;
-  box-shadow: 0 4px 14px rgba(15, 42, 74, 0.08);
+  box-shadow: 0 4px 14px rgba(15, 42, 74, 0.08); /* sombra de los elementos de la lista */
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .beneficios li:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 22px rgba(15, 42, 74, 0.14);
+  transform: translateY(-4px); /* para que los elementos de la lista se desplacen hacia arriba al pasar el mouse */
+  box-shadow: 0 10px 22px rgba(15, 42, 74, 0.14); /* sombra de los elementos de la lista al pasar el mouse */
 }
 
-.beneficios strong {
+.beneficios strong { /* para resaltar el texto en negrita */
   display: block;
   margin-bottom: 0.25rem;
   font-size: 1.1rem;
@@ -188,18 +188,18 @@ main h2 {
   transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.search-bar:focus-within {
-  border-color: var(--azul);
-  box-shadow: 0 0 0 4px rgba(21, 101, 216, 0.15);
+.search-bar:focus-within { /* para que la barra de búsqueda se resalte al recibir foco */
+  border-color: var(--azul); /* cambia el color del borde al recibir foco */
+  box-shadow: 0 0 0 4px rgba(21, 101, 216, 0.15); /* resalte al recibir foco */
 }
 
 .search-bar input {
-  flex: 1;
+  flex: 1; /* para que el input ocupe todo el espacio disponible */
   min-width: 0;
-  padding: 0.75rem 1.1rem;
+  padding: 0.75rem 1.1rem; /* padding superior, derecho, inferior e izquierdo del input */
   font: inherit;
-  color: var(--tinta);
-  background: transparent;
+  color: var(--tinta); /* color de texto del input */
+  background: transparent; /* color de fondo del input */
   border: none;
 }
 
@@ -212,7 +212,7 @@ main h2 {
   font: inherit;
   font-weight: 700;
   color: var(--blanco);
-  background: var(--azul);
+  background: var(--azul); /* color de fondo del botón */
   border: none;
   border-radius: 999px;
   cursor: pointer;
@@ -220,16 +220,16 @@ main h2 {
 }
 
 .search-bar button:hover {
-  background: var(--azul-oscuro);
+  background: var(--azul-oscuro); /* color de fondo del botón al pasar el mouse */
 }
 
 .search-bar button:active {
-  transform: scale(0.97);
-}
+  transform: scale(0.97); /* para que el botón se vea presionado al hacer clic */
+} 
 
 /* ========== Botón fijo de WhatsApp ========== */
 .fijado {
-  position: fixed;
+  position: fixed; /* para que el botón se mantenga en la misma posición al hacer scroll */
   right: 1.25rem;
   bottom: 1.25rem;
   z-index: 10;
@@ -238,13 +238,13 @@ main h2 {
 .fijado a {
   display: block;
   line-height: 0;
-  border-radius: 50%;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 50%; /* para que el botón sea redondo */
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3); /* sombra del botón */
   transition: transform 0.2s;
 }
 
 .fijado a:hover {
-  transform: scale(1.12);
+  transform: scale(1.12); /* para que el botón se vea más grande al pasar el mouse */
 }
 
 .fijado img {
@@ -253,15 +253,15 @@ main h2 {
 
 /* ========== Footer ========== */
 footer {
-  padding: 2.5rem 1.5rem;
+  padding: 2.5rem 1.5rem; /* padding superior, derecho, inferior e izquierdo del footer */
   text-align: center;
   color: #b8c9de;
   background: var(--tinta);
-  border-top: 5px solid var(--azul);
+  border-top: 5px solid var(--azul); /* borde superior del footer */
 }
 
 footer h2 {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.75rem; /* margen inferior del título del footer */
   color: var(--blanco);
 }
 
