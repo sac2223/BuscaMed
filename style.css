@@ -11,6 +11,7 @@ body {
     justify-content: center; /* centra el contenido horizontalmente dentro del cuerpo */
     align-items: center; /* centra el contenido verticalmente dentro del cuerpo */
     min-height: 100vh; /* asegura que el cuerpo tenga al menos la altura completa de la ventana del navegador */
+    padding: 20px;
 }
 .rojo {
   color: red; /* Cambia el color del texto a rojo*/
@@ -35,7 +36,8 @@ body {
 }
 .contenedor { /* crea un contenedor para centrar el contenido de la página */
     background-color: white; 
-    width: 400px; /* establece un ancho fijo de 400 píxeles para el contenedor */
+    width: 100%; /* establece un ancho fijo de 400 píxeles para el contenedor */
+    max-width: 400px;
     padding: 40px ;  /* agrega un relleno de 40 píxeles alrededor del contenido del contenedor */
     border-radius: 10px ;  /* agrega bordes redondeados al contenedor */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) ; /* agrega una sombra sutil al contenedor */
@@ -142,7 +144,8 @@ hr {/* estilo para todas las líneas horizontales */
 /*registro de farmacia*/
 
 .registro-contenedor {
-    width: 500px;  /* establece un ancho fijo de 500 píxeles para el contenedor */
+    width: 100%;
+    max-width: 500px;
 }
 
 select {
@@ -164,4 +167,9 @@ select {
 
 .volver {
     margin-top: 15px;
+}
+@media (max-width: 480px) {
+    .contenedor {
+        padding: 24px;
+    }
 }
