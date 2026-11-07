@@ -1,6 +1,6 @@
 
 :root {
-  --azul: #1565d8; /* color principal de la marca */
+  --azul: #4359e8; /* color principal de la marca */
   --azul-oscuro: #0d4aa8; /* color principal de la marca, versión más oscura */
   --azul-claro: #8fc2ff; /* color principal de la marca, versión más clara */
   --tinta: #0f2a4a;/* color de texto principal */
@@ -152,8 +152,8 @@ main h2 {
 
 .beneficios li {
   padding: 1.25rem 1.25rem 1.25rem 1.5rem; /* padding superior, derecho, inferior e izquierdo de los elementos de la lista */
-  background: var(--blanco);
-  border-left: 5px solid var(--azul);
+  background: var(--blanco);/* color de fondo de los elementos de la lista */
+  border-left: 5px solid var(--azul);/* borde izquierdo de los elementos de la lista */
   border-radius: 8px;
   box-shadow: 0 4px 14px rgba(15, 42, 74, 0.08); /* sombra de los elementos de la lista */
   transition: transform 0.2s, box-shadow 0.2s;
@@ -282,4 +282,86 @@ footer a:hover {
 .copy {
   margin-top: 1.5rem; /* margen superior del texto de copyright */
   font-size: 0.85rem;/* tamaño de fuente del texto de copyright */
+}
+@media (max-width: 768px) {
+ 
+  /* El header pasa de 2 columnas a 1 sola, y las áreas se apilan:
+     título, descripción y por último la navegación */
+  .header {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "titulo"
+      "desc"
+      "nav";
+    gap: 0.75rem;
+    padding: 1rem 1.25rem 1.25rem;
+  }
+ 
+  .header h3 {
+    max-width: none; /* usa todo el ancho disponible */
+    font-size: 0.95rem;
+  }
+ 
+  .navegacion a {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.9rem;
+  }
+ 
+  main {
+    gap: 2rem;
+    padding: 1.75rem 1rem; /* menos espacio lateral para aprovechar la pantalla */
+  }
+}
+ 
+/* ----- Celular (hasta 480px) ----- */
+@media (max-width: 480px) {
+ 
+  /* Los 3 enlaces del menú ocupan toda la fila y se apilan:
+     más fáciles de tocar con el dedo */
+  .navegacion ul {
+    flex-direction: column;
+  }
+ 
+  .navegacion a {
+    text-align: center;
+    padding: 0.7rem 1rem; /* botones más altos (mínimo ~44px recomendado para táctil) */
+  }
+ 
+  /* El buscador pasa de "píldora" horizontal a campos apilados */
+  .search-bar {
+    flex-direction: column;
+    border-radius: var(--radio);
+  }
+ 
+  .search-bar input {/* el input ocupa todo el ancho disponible */
+    text-align: center;
+  }
+ 
+  .search-bar button {/* el botón ocupa todo el ancho disponible */
+    width: 100%;
+    border-radius: 10px;
+  }
+ 
+  /* Botón de WhatsApp más pequeño y más pegado a la esquina */
+  .fijado { /* para que el botón se mantenga en la misma posición al hacer scroll */
+    right: 0.75rem;
+    bottom: 0.75rem;/* menos espacio lateral para aprovechar la pantalla */
+  }
+ 
+  .fijado img {
+    width: 44px;
+    height: 44px;
+  }
+ 
+  footer {
+    padding: 2rem 1rem;
+    /* espacio extra abajo para que el botón de WhatsApp no tape el copyright */
+    padding-bottom: 5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .contact .section-container {
+    flex-direction: row;
+    align-items: center;
+  }
 }
