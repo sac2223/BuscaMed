@@ -1,6 +1,6 @@
 
 :root {
-  --azul: #4359e8; /* color principal de la marca */
+  --azul: #1565d8; /* color principal de la marca */
   --azul-oscuro: #0d4aa8; /* color principal de la marca, versión más oscura */
   --azul-claro: #8fc2ff; /* color principal de la marca, versión más clara */
   --tinta: #0f2a4a;/* color de texto principal */
@@ -61,7 +61,7 @@ input:focus-visible {
   border-bottom: 5px solid var(--azul); /* borde inferior del header */
 }
 
-.h1 {
+.header h1 {
   grid-area: titulo; /* asigna el área de la cuadrícula al título */
   margin: 0;
   font-size: 2rem;
@@ -293,7 +293,7 @@ footer a:hover {
       "titulo"
       "desc"
       "nav";
-    gap: 0.75rem;
+    gap: 0.75rem; /* menos espacio entre las filas */
     padding: 1rem 1.25rem 1.25rem;
   }
  
@@ -357,11 +357,5 @@ footer a:hover {
     padding: 2rem 1rem;
     /* espacio extra abajo para que el botón de WhatsApp no tape el copyright */
     padding-bottom: 5rem;
-  }
-}
-@media (min-width: 1024px) {
-  .contact .section-container {
-    flex-direction: row;
-    align-items: center;
   }
 }
