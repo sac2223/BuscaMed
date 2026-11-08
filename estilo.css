@@ -16,7 +16,7 @@ html {
   scroll-behavior: smooth; /* para que el scroll sea suave */
 }
 
-h1, h2, h3 {
+h1, h2 {
   line-height: 1.2; /* altura de línea para títulos */
 }
 
@@ -136,7 +136,7 @@ main h2 {
   border-left: 5px solid #1565d8; 
   border-radius: 8px;
   box-shadow: 0 4px 14px rgba(15, 42, 74, 0.08); /* sombra de los elementos de la lista */
-  transition: transform 0.3s box-shadow 0.3s; 
+  transition: transform 0.3s, box-shadow 0.3s; 
 }
 
 .beneficios li:hover {
