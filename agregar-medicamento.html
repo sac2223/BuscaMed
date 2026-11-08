@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="agregar-medicamento.css">
+    <title>Agregar medicamento - BuscaMed</title>
+</head>
+<body>
+    
+    <header>
+        <h1> <span class="cruz"> + </span> BuscaMed</h1>
+        <a href="farmacia.html">Volver al panel</a>
+    </header>
+
+    <main>
+        <h2>Agregar medicamento</h2>
+        <form action="">
+            <label for="nombre">Nombre comercial</label>
+            <input type="text" id="nombre" required>
+
+            <label for="nombre-generico">Nombre genérico</label>
+            <input type="text" id="nombre-generico" required>
+
+            
+            <label for="laboratorio">Marca o laboratorio</label>
+            <input type="text" id="laboratorio" required>
+
+            <label for="categoria">Categoría</label>
+            <select name="categoria" id="categoria" required>
+                <option value="analgesico">Analgésicos</option>
+                <option value="antibioticos">Antibióticos</option>
+                <option value="antiinflamatorios">Antiinflamatorios</option>
+                <option value="antialérgicos">Antialérgicos</option>
+                <option value="otros">Otros</option>
+            </select>
+
+            <label for="presentacion">Presentación</label>
+            <select name="presentacion" id="presentacion" required>
+                <option value="tabletas">Tabletas</option>
+                <option value="capsulas">Cápsulas</option>
+                <option value="jarabe">Jarabe</option>
+                <option value="gotas">Gotas</option>
+                <option value="crema">Crema</option>
+                <option value="ampollas">Ampollas</option>
+            </select>
+
+            <label for="dosis">Dosis del medicamento</label>
+            <input type="text" id="dosis" required>
+
+            <label for="precio">Precio</label>
+            <input type="number" id="precio" min="1" required>
+
+            <label for="cantidad">Cantidad disponible</label>
+            <input type="number" id="cantidad" min="0" required>
+
+            <button type="submit">Guardar medicamento</button>
+        </form>
+
+    </main>
+
+</body>
+</html>
