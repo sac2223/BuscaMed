@@ -16,14 +16,22 @@ body {
   color: red; /* Cambia el color del texto a rojo*/
 }
 .boton_inicio {
+    display: block;
     background-color: #4359e8; /* Cambia el color de fondo del botón a un tono azul */
     color: white;
     padding: 12px; /* Cambia el color del texto del botón a blanco */
-    border: none; /* Elimina el borde del botón */
     border-radius: 6px; /* Agrega bordes redondeados al botón */
     font-size: 1rem; /* Cambia el tamaño de la fuente del botón a 1rem */
     cursor: pointer; /* Cambia el cursor a una mano al pasar sobre el botón */
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
 }
+
+.boton_inicio:hover{
+    background-color: #17345C;
+}
+
 .registro-contenedor button {
     background-color: #4359e8; /* Cambia el color de fondo del botón a un tono azul */
     color: white; /* Cambia el color del texto del botón a blanco */
