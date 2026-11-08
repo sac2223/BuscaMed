@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, sans-serif; /* establece la fuente del texto a Arial con una fuente de respaldo sans-serif */
-    background-color:#060a2a; /* establece el color de fondo del cuerpo a un tono azul muy oscuro */
+    background-color:#17345C; /* establece el color de fondo del cuerpo a un tono azul muy oscuro */
     display: flex; /* utiliza flexbox para alinear los elementos dentro del cuerpo */
     justify-content: center; /* centra el contenido horizontalmente dentro del cuerpo */
     align-items: center; /* centra el contenido verticalmente dentro del cuerpo */
