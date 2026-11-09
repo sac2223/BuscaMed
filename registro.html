@@ -1,35 +1,30 @@
-<!DOCTYPE html> <!--define el tipo de documento como HTML5 *//-->
-<html lang="en">
+<!DOCTYPE html>
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- /* establece la codificación de caracteres y la configuración de la ventana gráficapara dispositivos móviles */--> 
-    <title> Registro-BuscaMed</title>
-    <link rel="stylesheet" href="style.css"><!-- /* vincula el archivo de hoja de estilo CSS para aplicar estilos a la página */-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar farmacia | BuscaMed</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <div class="contenedor registro-contenedor"> <!--/* crea un contenedor principal para el contenido de la página con una clase adicional para estilos específicos de la página de registro */-->
-        <div class="logo"> 
-          <span class="rojo">✚</span> BuscaMed <!--/* muestra el logotipo de la página con un símbolo y el nombre de la marca, aplicando un estilo de color rojo al símbolo */-->
-        </div>
+    <main class="contenedor registro-contenedor">
+        <div class="logo"><span class="rojo" aria-hidden="true">✚</span> BuscaMed</div>
 
-        <h1> Registro de Farmacia</h1>
+        <h1>Registro de farmacia</h1>
+        <p>Registra tu farmacia para hacer parte de BuscaMed</p>
 
-        <p> Registra tu farmacia para hacer parte de BuscaMed </p>
+        <form action="#" method="post">
+            <label for="farmacia">Nombre de la farmacia</label>
+            <input type="text" id="farmacia" name="farmacia" placeholder="Ej. Farmacia San José" required>
 
-        <form>
+            <label for="nit">NIT</label>
+            <input type="text" id="nit" name="nit" placeholder="Ej. 123456789-0" pattern="[0-9]{8,10}-?[0-9]" title="Ejemplo: 123456789-0" required>
 
-            <label>Nombre de la Farmacia</label>
-            <input type="text" placeholder="ej.Farmacia San Jose" required> <!--/* crea un formulario con campos de entrada para registrar la información de la farmacia, incluyendo nombre, NIT, dirección, ciudad, nombre del responsable, correo electrónico, teléfono y contraseña. Cada campo tiene una etiqueta descriptiva y un marcador de posición para guiar al usuario. Todos los campos son obligatorios (required). */-->
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" name="direccion" placeholder="Ej. Calle 123 # 45-67" autocomplete="street-address" required>
 
-            <label>NIT</label>
-            <input type="text" placeholder="ej. 123456789-0" required> <!--/* crea un campo de entrada para el NIT de la farmacia con un marcador de posición y lo hace obligatorio */-->
-
-            <label>Dirección</label>
-            <input type="address" placeholder="ej. Calle 123 # 45-67" required> <!--/* crea un campo de entrada para la dirección de la farmacia con un marcador de posición y lo hace obligatorio */-->
-
-            <label>Ciudad</label> <!--/* crea un campo de selección para la ciudad de la farmacia con un marcador de posición y lo hace obligatorio */-->
-            <select name="city" required>
+            <label for="ciudad">Ciudad</label>
+            <select id="ciudad" name="ciudad" required>
                 <option value="">Selecciona una ciudad</option>
                 <option>Medellín</option>
                 <option>Bogotá</option>
@@ -38,44 +33,26 @@
                 <option>Cartagena</option>
             </select>
 
-            <label>Nombre del responsable</label> <!--/* crea un campo de entrada para el nombre del responsable de la farmacia con un marcador de posición y lo hace obligatorio */-->
-            <input 
-                type="text" 
-                placeholder="Ej. Juan Pérez" required>
+            <label for="responsable">Nombre del responsable</label>
+            <input type="text" id="responsable" name="responsable" placeholder="Ej. Juan Pérez" autocomplete="name" required>
 
-                  <label>Correo electrónico</label> <!--/* crea un campo de entrada para el correo electrónico de la farmacia con un marcador de posición y lo hace obligatorio */-->
-            <input  
-                type="email" 
-                placeholder="Ej. farmacia@correo.com" required
-            >
+            <label for="correo">Correo electrónico</label>
+            <input type="email" id="correo" name="correo" placeholder="Ej. farmacia@correo.com" autocomplete="email" required>
 
-            <label>Teléfono</label> <!--/* crea un campo de entrada para el teléfono de la farmacia con un marcador de posición y lo hace obligatorio */-->
-            <input 
-                type="tel" 
-                placeholder="Ej. 300 123 4567" required
-            >
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ej. 300 123 4567" autocomplete="tel" required>
 
-            <label>Contraseña</label> <!--/* crea un campo de entrada para la contraseña de la farmacia con un marcador de posición y lo hace obligatorio */-->
-            <input 
-                type="password" 
-                placeholder="Mínimo 8 caracteres" required
-            >
-
-            <button type="submit"> <!--/* crea un botón de envío para el formulario con el texto "Registrarme" */-->
-                Registrarme
-            </button>
-
-            <a href="index.html" class="volver"> ← Volver al inicio </a>
-
+            <label for="clave">Contraseña</label>
+            <input type="password" id="clave" name="clave" placeholder="Mínimo 8 caracteres" minlength="8" autocomplete="new-password" required>
+              <h2>Subir documentos</h2>
+               <label for="archivo">Selecciona los documentos a subir:</label>
+               <input type="file" id="archivo" name="archivos[]" multiple required>
+               
+            <button type="submit">Registrarme</button>
+            <a href="index.html" class="volver">Volver al inicio</a>
         </form>
-
-          <hr>
-
-        <p class="registro"> <!--/* crea un párrafo con un enlace para los usuarios que ya tienen una cuenta, invitándolos a iniciar sesión en lugar de registrarse nuevamente */-->
-            ¿Ya tienes una cuenta?
-            <a href="inicio.html">Iniciar sesión</a>
-        </p>
-        
-    </div>
+        <hr>
+        <p class="registro">¿Ya tienes una cuenta? <a href="inicio.html">Iniciar sesión</a></p>
+    </main>
 </body>
-</html>>
+</html>
