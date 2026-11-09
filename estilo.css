@@ -1,33 +1,19 @@
-:root {
-  --azul: #1565d8; /* color principal de la marca */
-  --azul-oscuro: #0d4aa8; /* color principal de la marca, versión más oscura */
-  --azul-claro: #8fc2ff; /* color principal de la marca, versión más clara */
-  --tinta: #0f2a4a;/* color de texto principal */
-  --gris: #5a6b80; /* color de texto secundario */
-  --borde: #cddbea; /* color de borde */
-  --fondo: #e8f1fb; /* color de fondo */
-  --blanco: #ffffff; /* color de fondo de elementos */
-  --radio: 14px; /* radio de borde de elementos */
-  --fuente: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif; /* fuente principal */
+body { /* estilos base de la página */
+  margin: 0;
+  font-family: Arial, sans-serif; /* fuente principal de toda la página */ ;
+  line-height: 1.6; /* altura de línea base */
+  background: #e8f1fb; /* color de fondo */
 }
 
-/* ========== Base ========== */
-*,
-*::before, 
-*::after { /* para que el padding y el borde se incluyan en el ancho y alto de los elementos */
-  box-sizing: border-box; /* para que el padding y el borde se incluyan en el ancho y alto de los elementos */
+a:focus-visible, /* para que los enlaces tengan un resalte visible al recibir foco */
+button:focus-visible, 
+input:focus-visible {
+  outline: 3px solid rgba(21, 101, 216, 0.45);/* resalte visible al recibir foco */
+  outline-offset: 2px; /* separación entre el resalte y el elemento */
 }
 
 html {
   scroll-behavior: smooth; /* para que el scroll sea suave */
-}
-
-body { /* estilos base de la página */
-  margin: 0;
-  font-family: var(--fuente); /* fuente principal */
-  line-height: 1.6; /* altura de línea base */
-  color: var(--tinta); /* color de texto principal */
-  background: var(--fondo); /* color de fondo */
 }
 
 h1, h2, h3 {
@@ -38,36 +24,28 @@ h1, h2, h3 {
   color: red; /* clase para resaltar texto en rojo */
 }
 
-a:focus-visible, /* para que los enlaces tengan un resalte visible al recibir foco */
-button:focus-visible, 
-input:focus-visible {
-  outline: 3px solid rgba(21, 101, 216, 0.45);/* resalte visible al recibir foco */
-  outline-offset: 2px; /* separación entre el resalte y el elemento */
-}
-
-/* ========== Header ========== */
 .header {
   display: grid;
-  grid-template-columns: 1fr auto; /* dos columnas: una flexible y otra automática */
+  grid-template-columns: 1fr auto;/* dos columnas: una flexible y otra automática */
+  align-items: center; /* alinea los elementos verticalmente al centro */
+  gap: 0.5rem 1.5rem;
+  padding: 1.25rem 2rem 1.5rem;/* padding superior, derecho, inferior e izquierdo */
+  color: #ffffff;
+  background: #0f2a4a;/* color de fondo del header */
+  border-bottom: 5px solid #1565d8;/* borde inferior del header */
+   /* Organiza el título arriba y los botones debajo */
   grid-template-areas: /* define las áreas de la cuadrícula */
     "titulo nav" /* primera fila: título y navegación */
     "desc   desc";
-  align-items: center; /* alinea los elementos verticalmente al centro */
-  gap: 0.5rem 1.5rem;
-  padding: 1.25rem 2rem 1.5rem; /* padding superior, derecho, inferior e izquierdo */
-  color: var(--blanco); /* color de texto blanco */
-  background: var(--tinta); /* color de fondo del header */
-  border-bottom: 5px solid var(--azul); /* borde inferior del header */
 }
 
-.header h1 {
+.h1 {
   grid-area: titulo; /* asigna el área de la cuadrícula al título */
   margin: 0;
   font-size: 2rem;
 }
 
 .header h3 {
-  grid-area: desc;
   max-width: 60ch; /* ancho máximo del texto de descripción */
   margin: 0;
   font-size: 1rem;
@@ -78,6 +56,7 @@ input:focus-visible {
 /* ========== Navegación ========== */
 .navegacion {
   grid-area: nav; /* asigna el área de la cuadrícula a la navegación */
+  
 }
 
 .navegacion ul {
@@ -89,24 +68,25 @@ input:focus-visible {
   list-style: none; /* elimina los puntos de la lista */
 }
 
+
 .navegacion a {
-  display: block;
+  text-decoration: none; /* elimina el subrayado de los enlaces */
+  display: block; /* hace que el elemento ocupe todo el ancho disponible
+  de su contenedor y comience en una nueva línea. */
   padding: 0.5rem 1rem;
   font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--blanco);
-  text-decoration: none;
+  font-weight: 600; /* establece el grosor de la letra, dándole un aspecto seminegrita */
+  color: #ffffff;
   border: 1.5px solid rgba(255, 255, 255, 0.3); /* borde de los enlaces de navegación */
   border-radius: 999px; /* borde redondeado de los enlaces de navegación */
-  transition: background 0.2s, border-color 0.2s; /* transición para el cambio de color de fondo y borde al pasar el mouse */
+  transition: background 0.3s, border-color 0.2s; /* transición para el cambio de color de fondo y borde al pasar el mouse */
 }
 
 .navegacion a:hover {
-  background: var(--azul); /* color de fondo al pasar el mouse */
-  border-color: var(--azul); /* color de borde al pasar el mouse */
+  background: #1565d8;/* color de fondo al pasar el mouse */
+  border-color: #1565d8; /* color de borde al pasar el mouse */
 }
 
-/* ========== Contenido principal ========== */
 main {
   display: grid; /* para que los elementos del main se muestren en una cuadrícula */
   gap: 2.5rem;
@@ -121,20 +101,21 @@ main h2 {
 }
 
 /* ----- Bienvenida (lo más llamativo de la página) ----- */
+
 .hero {
   padding: 3rem 2.5rem; /* padding superior, derecho, inferior e izquierdo de la sección de bienvenida */
-  color: var(--blanco); /* color de texto blanco */
-  background: var(--azul); /* color de fondo de la sección de bienvenida */
-  border-radius: var(--radio); /* radio de borde de la sección de bienvenida */
+  color: #ffffff; /* color de texto blanco */
+  background: #1565d8; /* color de fondo de la sección de bienvenida */ 
+  border-radius: 14px;
   box-shadow: 0 14px 32px rgba(21, 101, 216, 0.28); /* sombra de la sección de bienvenida */
 }
 
 .hero h2 {
-  font-size: clamp(2rem, 5vw, 3rem); /* tamaño de fuente del título de bienvenida, ajustable según el ancho de la ventana */
+  font-size: 2rem; /* tamaño de fuente del título de bienvenida*/
 }
 
 .hero p {
-  max-width: 62ch; /* ancho máximo del párrafo de bienvenida */
+  max-width: 800px; /* limita el ancho máximo del párrafo para que el texto no ocupe demasiado espacio */
   margin: 0;
   font-size: 1.1rem;
 }
@@ -142,8 +123,8 @@ main h2 {
 /* ----- Beneficios ----- */
 .beneficios ul {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* para que los elementos de la lista se ajusten al ancho de la ventana */
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr); /* crea 2 columnas del mismo tamaño */
+   gap: 1rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -151,16 +132,17 @@ main h2 {
 
 .beneficios li {
   padding: 1.25rem 1.25rem 1.25rem 1.5rem; /* padding superior, derecho, inferior e izquierdo de los elementos de la lista */
-  background: var(--blanco);/* color de fondo de los elementos de la lista */
-  border-left: 5px solid var(--azul);/* borde izquierdo de los elementos de la lista */
+  background: #ffffff;
+  border-left: 5px solid #1565d8; 
   border-radius: 8px;
   box-shadow: 0 4px 14px rgba(15, 42, 74, 0.08); /* sombra de los elementos de la lista */
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.3s box-shadow 0.3s; 
 }
 
 .beneficios li:hover {
   transform: translateY(-4px); /* para que los elementos de la lista se desplacen hacia arriba al pasar el mouse */
   box-shadow: 0 10px 22px rgba(15, 42, 74, 0.14); /* sombra de los elementos de la lista al pasar el mouse */
+  transition: 0.3s;
 }
 
 .beneficios strong { /* para resaltar el texto en negrita */
@@ -170,35 +152,46 @@ main h2 {
 }
 
 /* ----- Buscador ----- */
+/* Centra el buscador */
 .buscador {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
+/* Diseño de la barra */
 .search-bar {
   display: flex;
-  gap: 0.5rem;
-  max-width: 680px;
+  width: 100%;
+  max-width: 750px;
   margin: 0 auto;
-  padding: 0.4rem;
-  background: var(--blanco);
-  border: 1.5px solid var(--borde);
-  border-radius: 999px;
-  box-shadow: 0 6px 20px rgba(15, 42, 74, 0.08);
-  transition: border-color 0.2s, box-shadow 0.2s;
+  padding: 0.6rem;
+  background: white;
+  border: 2px solid #cddbea;
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(15, 42, 74, 0.12);
+}
+
+/* Tamaño del texto */
+.search-bar input {
+  flex: 1;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  outline: none;
 }
 
 .search-bar:focus-within { /* para que la barra de búsqueda se resalte al recibir foco */
-  border-color: var(--azul); /* cambia el color del borde al recibir foco */
+  border-color: #1565d8; /* cambia el color del borde al recibir foco */
   box-shadow: 0 0 0 4px rgba(21, 101, 216, 0.15); /* resalte al recibir foco */
 }
-
 .search-bar input {
   flex: 1; /* para que el input ocupe todo el espacio disponible */
   min-width: 0;
   padding: 0.75rem 1.1rem; /* padding superior, derecho, inferior e izquierdo del input */
-  font: inherit;
-  color: var(--tinta); /* color de texto del input */
-  background: transparent; /* color de fondo del input */
+  font-family: Arial, sans-serif; /* establece el tipo de letra */
+  color: #0f2a4a;
+  background: none; /* elimina el fondo del elemento */
   border: none;
 }
 
@@ -208,30 +201,34 @@ main h2 {
 
 .search-bar button {
   padding: 0.75rem 1.6rem;
-  font: inherit;
-  font-weight: 700;
-  color: var(--blanco);
-  background: var(--azul); /* color de fondo del botón */
-  border: none;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.1s;
+font-family: Arial, sans-serif; /* establece el tipo de letra */
+font-size: 16px; /* establece el tamaño de la letra */
+font-weight: normal; /* establece el grosor normal de la letra */
+font-weight: 700;
+color: #ffffff;
+background: #1565d8;
+border: none;
+border-radius: 999px;
+cursor: pointer;
+transition: background 0.2s, transform 0.1s;
 }
 
 .search-bar button:hover {
-  background: var(--azul-oscuro); /* color de fondo del botón al pasar el mouse */
+  background: #0d4aa8; /* color de fondo del botón al pasar el mouse */
 }
 
 .search-bar button:active {
   transform: scale(0.97); /* para que el botón se vea presionado al hacer clic */
 } 
 
+
 /* ========== Botón fijo de WhatsApp ========== */
 .fijado {
   position: fixed; /* para que el botón se mantenga en la misma posición al hacer scroll */
   right: 1.25rem;
   bottom: 1.25rem;
-  z-index: 10;
+  z-index: 10;/* Controla la posición del elemento en las capas,
+  permitiendo que aparezca delante de otros elementos. */
 }
 
 .fijado a {
@@ -250,111 +247,34 @@ main h2 {
   border-radius: 50%;
 }
 
-/* ========== Footer ========== */
 footer {
   padding: 2.5rem 1.5rem; /* padding superior, derecho, inferior e izquierdo del footer */
   text-align: center;
   color: #b8c9de;
-  background: var(--tinta);
-  border-top: 5px solid var(--azul); /* borde superior del footer */
+  background: #0f2a4a ;
+  border-top: 5px solid #1565d8; /* borde superior del footer */
 }
 
 footer h2 {
   margin: 0 0 0.75rem; /* margen inferior del título del footer */
-  color: var(--blanco); 
+  color: #ffffff;
 }
 
 footer p {
-  max-width: 62ch;/* ancho máximo del párrafo del footer */
+  max-width: 800px; /* establece un ancho máximo de 800 píxeles para el párrafo */
   margin: 0 auto 1rem; /* margen inferior del párrafo del footer */
 }
 
 footer a {
-  color: var(--azul-claro);/* color de los enlaces del footer */
+  color: #8fc2ff; /* color de los enlaces del footer */
   font-weight: 600;/* peso de fuente de los enlaces del footer */
 }
 
 footer a:hover {
-  color: var(--blanco);/* color de los enlaces del footer al pasar el mouse */
+  color: #ffffff; /* color de los enlaces del footer al pasar el mouse */   
 }
 
 .copy {
   margin-top: 1.5rem; /* margen superior del texto de copyright */
   font-size: 0.85rem;/* tamaño de fuente del texto de copyright */
-}
-@media (max-width: 768px) {
- 
-  /* El header pasa de 2 columnas a 1 sola, y las áreas se apilan:
-     título, descripción y por último la navegación */
-  .header {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "titulo"
-      "desc"
-      "nav";
-    gap: 0.75rem; /* menos espacio entre las filas */
-    padding: 1rem 1.25rem 1.25rem;
-  }
- 
-  .header h3 {
-    max-width: none; /* usa todo el ancho disponible */
-    font-size: 0.95rem;
-  }
- 
-  .navegacion a {
-    padding: 0.5rem 0.9rem;
-    font-size: 0.9rem;
-  }
- 
-  main {
-    gap: 2rem;
-    padding: 1.75rem 1rem; /* menos espacio lateral para aprovechar la pantalla */
-  }
-}
- 
-/* ----- Celular (hasta 480px) ----- */
-@media (max-width: 480px) {
- 
-  /* Los 3 enlaces del menú ocupan toda la fila y se apilan:
-     más fáciles de tocar con el dedo */
-  .navegacion ul {
-    flex-direction: column;
-  }
- 
-  .navegacion a {
-    text-align: center;
-    padding: 0.7rem 1rem; /* botones más altos (mínimo ~44px recomendado para táctil) */
-  }
- 
-  /* El buscador pasa de "píldora" horizontal a campos apilados */
-  .search-bar {
-    flex-direction: column;
-    border-radius: var(--radio);
-  }
- 
-  .search-bar input {/* el input ocupa todo el ancho disponible */
-    text-align: center;
-  }
- 
-  .search-bar button {/* el botón ocupa todo el ancho disponible */
-    width: 100%;
-    border-radius: 10px;
-  }
- 
-  /* Botón de WhatsApp más pequeño y más pegado a la esquina */
-  .fijado { /* para que el botón se mantenga en la misma posición al hacer scroll */
-    right: 0.75rem;
-    bottom: 0.75rem;/* menos espacio lateral para aprovechar la pantalla */
-  }
- 
-  .fijado img {
-    width: 44px;
-    height: 44px;
-  }
- 
-  footer {
-    padding: 2rem 1rem;
-    /* espacio extra abajo para que el botón de WhatsApp no tape el copyright */
-    padding-bottom: 5rem;
-  }
 }
